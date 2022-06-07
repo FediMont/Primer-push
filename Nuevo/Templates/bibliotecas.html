@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}
+Bibliotecas
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<div class="col-3">  
+    <form class="form-inline m-2" action="/busca_biblio/" method="GET">
+        <input class="form-control my-2" type="text" placeholder="Buscar por nombre" aria-label="Search" name = "search">
+        <button class="btn btn-outline-success m-2" type="submit">Buscar</button>
+    </form>
+    </div>
+    <div class="col-3">
+    <a class="btn btn-outline-dark m-2" href="/biblio_list/" role="button">Ver listado completo</a>
+    </div>
+    <div class="col-3">  
+    <a class="btn btn-outline-primary m-2" href="/carga_biblio/" role="button">Sumar Biblioteca</a>
+    </div>
+    <div class="col-3">  
+    <a class="btn btn-outline-danger m-2" href="#" role="button">Eliminar Biblioteca</a>
+</div>
+{% endblock %}
